@@ -1,0 +1,141 @@
+.list-box {
+  width: min(1040px, 100%);
+  padding: 36px 38px 40px;
+  border-radius: 42px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-line);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.16);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.small-en {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--sub-text);
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.list-header h2 {
+  font-size: 30px;
+  letter-spacing: -0.06em;
+  color: var(--text);
+}
+
+.list-top {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list-top input {
+  width: 130px;
+  height: 34px;
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.list-top button,
+.sort-btn {
+  height: 34px;
+  border: 1px solid var(--input-line);
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.sort-btn.active {
+  background: var(--main-button);
+  border-color: transparent;
+  color: var(--main-button-text);
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.post-card {
+  min-height: 190px;
+  padding: 20px;
+  border-radius: 26px;
+  background: var(--post-bg);
+  border: 1px solid var(--card-line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.post-card h3 {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  font-size: 14px;
+  color: var(--sub-text);
+  margin-bottom: 8px;
+}
+
+.preview {
+  font-size: 14px;
+  color: var(--sub-text);
+  line-height: 1.55;
+  height: 44px;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.like-btn,
+.detail-btn,
+.small-btn,
+.delete-btn{
+  height: 32px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}

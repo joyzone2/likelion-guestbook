@@ -1,0 +1,161 @@
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: var(--modal-overlay);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal {
+  position: fixed;
+  z-index: 11;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 800px;
+  min-height: 300px;
+  max-height: 680px;
+  overflow-y: auto;
+
+  padding: 34px 32px 30px;
+  border-radius: 32px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-line);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.small-modal {
+  width: 430px;
+  height : 450px;
+  text-align: center;
+}
+
+.warning-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--chip-bg);
+  color: #ff8fab;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.modal-text {
+  color: var(--sub-text);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 8px 0 22px;
+}
+
+.detail-body {
+  margin: 18px 0 18px;
+  padding: 22px 24px;
+  min-height: 200px;
+  border-radius: 18px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-line);
+  color: var(--sub-text);
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.modal-small-title {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13px;
+  color: var(--sub-text);
+  margin-bottom: 4px;
+}
+
+#editModal h2,
+#commentModal h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+#commentModal textarea,
+#editModal textarea {
+  min-height: 130px;
+}
+
+.comment-box {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--card-line);
+}
+
+.comment-box h3 {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.comment-list {
+  display: grid;
+  gap: 10px;
+}
+
+.comment-item {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-line);
+}
+
+.comment-writer {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: var(--sub-text);
+  line-height: 1.5;
+}
+
+.comment-date {
+  font-size: 11px;
+  color: var(--sub-text);
+  margin-top: 6px;
+}
+
+.empty-comment {
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-line);
+  color: var(--sub-text);
+  font-size: 14px;
+}
+
+#detailContent {
+  text-align: left;
+}
+
+#detailModal .detail-title {
+  text-align: left;
+}

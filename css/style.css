@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #090d22;
+  color: #f8f4ff;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* 기본값: 밤 */
+#app {
+  /* 배경 */
+  --bg: #090d22;
+  --bg-light-1: rgba(98, 110, 201, 0.18);
+  --bg-light-2: rgba(142, 134, 255, 0.16);
+  --modal-overlay: rgba(11, 16, 36, 0.58);
+
+  /* 글자 */
+  --text: #f8f4ff;
+  --sub-text: #c7c2e6;
+  --side-text: rgba(248, 244, 255, 0.28);
+  --placeholder: #a9a4c7;
+
+  /* 카드 / 입력창 / 버튼 */
+  --card-bg: #141a33;
+  --card-line: #343a5a;
+  --post-bg: #252b4d;
+  --input-bg: #252b4d;
+  --input-line: #4a527c;
+
+  --chip-bg: #343a5a;
+  --chip-text: var(--text);
+
+  /* 창문 */
+  --window-bg: linear-gradient(180deg, #101733 0%, #17204a 52%, #20285c 100%);
+  --window-frame: #263465;
+  --window-line: #6471bd;
+  --hill-bg: linear-gradient(180deg, #252f66 0%, #302d6d 100%);
+
+  /* 달 */
+  --sun-moon: #fff09a;
+  --moon-cover: #1a2552;
+  --sun-moon-shadow: rgba(255, 240, 154, 0.72);
+
+  /* 주요 버튼 */
+  --main-button: linear-gradient(135deg, #8e86ff, #c696ff);
+  --main-button-text: #ffffff;
+  --main-button-shadow: rgba(142, 134, 255, 0.3);
+
+  /* 상세보기 / 삭제 버튼 */
+  --detail-button: var(--chip-bg);
+  --detail-button-text: var(--text);
+  --delete-button: linear-gradient(135deg, #ff8fab, #d86c84);
+
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 낮: 06:00 ~ 14:59 */
+#app.theme-day {
+  --bg: #fff9f0;
+  --bg-light-1: rgba(255, 232, 138, 0.22);
+  --bg-light-2: rgba(169, 200, 163, 0.2);
+
+  --text: #4b5f78;
+  --sub-text: #71809b;
+  --side-text: rgba(113, 128, 155, 0.72);
+
+  --window-bg: linear-gradient(180deg, #dceff7 0%, #eff6ef 58%, #f6edcf 100%);
+  --window-frame: #e7cfaf;
+  --window-line: #a8794f;
+  --hill-bg: linear-gradient(180deg, #a9c8a3 0%, #8eb68f 100%);
+
+  --sun-moon: #ffe88a;
+  --moon-cover: transparent;
+  --sun-moon-shadow: rgba(255, 232, 138, 0.7);
+
+  --card-bg: #fff7ea;
+  --card-line: #e7d4bc;
+
+  --post-bg: #fffdf8;
+  --input-bg: #fffdf8;
+  --input-line: #e7d4bc;
+  --placeholder: #a99c8c;
+
+  --chip-bg: #f1e2d0;
+  --chip-text: #4b5f78;
+
+  --main-button: linear-gradient(135deg, #fff1a6, #f2c98b);
+  --main-button-text: #4b5f78;
+  --main-button-shadow: rgba(242, 201, 139, 0.32);
+
+  --detail-button: linear-gradient(135deg, #a9c8a3, #7fa986);
+  --detail-button-text: #ffffff;
+
+  --delete-button: linear-gradient(135deg, #f3b6a8, #d98686);
+  --modal-overlay: rgba(255, 249, 240, 0.48);
+}
+
+/* 노을: 15:00 ~ 18:59 */
+#app.theme-sunset {
+  --bg: #fff1e8;
+  --bg-light-1: rgba(255, 207, 170, 0.28);
+  --bg-light-2: rgba(216, 184, 237, 0.28);
+
+  --text: #5c3f5f;
+  --sub-text: #8a6b83;
+  --side-text: rgba(178, 129, 110, 0.72);
+
+  --window-bg: linear-gradient(180deg, #f8cdaa 0%, #d8b8ed 58%, #d78b80 100%);
+  --window-frame: #e4b27f;
+  --window-line: #a66e45;
+  --hill-bg: linear-gradient(180deg, #e99a86 0%, #d48780 100%);
+
+  --sun-moon: #ffe28a;
+  --moon-cover: transparent;
+  --sun-moon-shadow: rgba(255, 226, 138, 0.75);
+
+  --card-bg: #ffe4cd;
+  --card-line: #e9bea1;
+
+  --post-bg: #fffaf4;
+  --input-bg: #fff7ef;
+  --input-line: #e7c3a8;
+  --placeholder: #a98d90;
+
+  --chip-bg: #f2ddca;
+  --chip-text: #5c3f5f;
+
+  --main-button: linear-gradient(135deg, #fff3c4, #f6c98f);
+  --main-button-text: #5c3f5f;
+  --main-button-shadow: rgba(246, 201, 143, 0.32);
+
+  --detail-button: linear-gradient(135deg, #d99586, #c878a6);
+  --detail-button-text: #ffffff;
+
+  --delete-button: linear-gradient(135deg, #d99586, #c8787e);
+  --modal-overlay: rgba(255, 243, 232, 0.5);
+}
+
+/* 밤: 19:00 ~ 05:59 */
+#app.theme-night {
+  --bg: #090d22;
+}
+
+/* 뒤쪽 블러 빛 */
+#app::before {
+  content: "";
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  left: 16%;
+  top: 14%;
+  border-radius: 50%;
+  background: var(--bg-light-1);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+#app::after {
+  content: "";
+  position: fixed;
+  width: 480px;
+  height: 480px;
+  right: 12%;
+  bottom: 10%;
+  border-radius: 50%;
+  background: var(--bg-light-2);
+  filter: blur(110px);
+  pointer-events: none;
+}
+
+/* 화면 section */
+.page {
+  min-height: 100vh;
+  padding: 34px 20px;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+.page.active {
+  display: grid;
+  place-items: center;
+}
+
+/* 사이드 문구 */
+.side-text {
+  position: absolute;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: var(--side-text);
+}
+
+.side-text.left {
+  left: 20%;
+  top: 31%;
+}
+
+.side-text.right {
+  right: 20%;
+  bottom: 20%;
+}
+
+/* 별 */
+.star {
+  position: absolute;
+  z-index: 4;
+  color: #ffffff;
+  font-size: 24px;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.95),
+    0 0 20px rgba(255, 255, 255, 0.62);
+}
+
+/* 입력창 */
+input,
+textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--input-line);
+  background: var(--input-bg);
+  color: var(--text);
+  padding: 14px 16px;
+  outline: none;
+  font-size: 15px;
+}
+
+input {
+  height: 52px;
+}
+
+textarea {
+  min-height: 126px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--main-button-text);
+  box-shadow: 0 0 0 3px var(--main-button-shadow);
+}
+
+label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+label span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* 버튼 */
+.submit-btn {
+  height: 42px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--main-button);
+  color: var(--main-button-text);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow:
+    0 14px 36px var(--main-button-shadow),
+    0 0 28px var(--main-button-shadow);
+}
+
+.button-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.button-area.two {
+  justify-content: center;
+}
+
+button:hover {
+  opacity: 0.85;
+}
