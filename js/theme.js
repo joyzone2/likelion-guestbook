@@ -6,33 +6,28 @@ const writeSideRight = document.querySelector("#writeSideRight");
 
 function setThemeByTime() {
   const hour = new Date().getHours();
-
   app.classList.remove("theme-day");
   app.classList.remove("theme-sunset");
   app.classList.remove("theme-night");
 
-  if (hour >= 6 && hour < 15) {
+  if (hour >= 6 && hour < 12) {
     app.classList.add("theme-day");
-
-    writeTitle.textContent = "🌻오늘의 기록 남기기🌻";
-    listTitle.textContent = "방명록 기록🌤️";
-    writeSideLeft.textContent = "morning note";
-    writeSideRight.textContent = "soft daylight";
-  } else if (hour >= 15 && hour < 19) {
+    writeTitle.textContent = "🌻방명록을 남겨주세요!🌻";
+    listTitle.textContent = "방명록 기록☀️";
+    writeSideLeft.textContent = "오전모드입니다";
+    writeSideRight.textContent = "It's Light Mode";
+  } else if (hour >= 12 && hour < 18) {
     app.classList.add("theme-sunset");
-
-    writeTitle.textContent = "💌오늘의 기록 남기기💌";
+    writeTitle.textContent = "💌방명록을 남겨주세요!💌";
     listTitle.textContent = "방명록 기록✨";
-    writeSideLeft.textContent = "sunset note";
-    writeSideRight.textContent = "warm memory";
+    writeSideLeft.textContent = "오후모드입니다";
+    writeSideRight.textContent = "It's Sunset Mode";
   } else {
     app.classList.add("theme-night");
-
-    writeTitle.textContent = "💫오늘의 기록 남기기💫";
+    writeTitle.textContent = "💫방명록을 남겨주세요!💫";
     listTitle.textContent = "방명록 기록🌙";
-    writeSideLeft.textContent = "moonlight note";
-    writeSideRight.textContent = "leave your day here";
+    writeSideLeft.textContent = "저녁모드입니다";
+    writeSideRight.textContent = "It's Dark Mode";
   }
 }
-
 setThemeByTime();

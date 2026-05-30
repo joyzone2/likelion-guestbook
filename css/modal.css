@@ -3,7 +3,7 @@
   inset: 0;
   z-index: 10;
   background: var(--modal-overlay);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(12px);
 }
 
@@ -13,15 +13,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   width: 800px;
-  min-height: 300px;
-  max-height: 680px;
+  height : 700px;
   overflow-y: auto;
-
-  padding: 34px 32px 30px;
+  padding: 60px 40px 30px;
   border-radius: 32px;
-  background: var(--card-bg);
+  background: var(--post-bg);
   border: 1px solid var(--card-line);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
 }
@@ -35,16 +32,16 @@
 
 .small-modal {
   width: 430px;
-  height : 450px;
+  height: auto;
   text-align: center;
 }
 
 .warning-icon {
   width: 64px;
   height: 64px;
-  margin: 0 auto 18px;
+  margin: 0 auto 15px;
   border-radius: 50%;
-  background: var(--chip-bg);
+  background: var(--close-button);
   color: #ff8fab;
   display: grid;
   place-items: center;
@@ -54,9 +51,8 @@
 
 .modal-text {
   color: var(--sub-text);
-  font-size: 14px;
-  line-height: 1.65;
-  margin: 8px 0 22px;
+  font-size: 18px;
+  margin: 8px 0 14px;
 }
 
 .detail-body {
@@ -66,8 +62,8 @@
   border-radius: 18px;
   background: var(--input-bg);
   border: 1px solid var(--input-line);
-  color: var(--sub-text);
-  font-size: 15px;
+  color: var(--box-text);
+  font-size: 20px;
   line-height: 1.7;
   white-space: pre-wrap;
 }
@@ -82,7 +78,7 @@
 .modal-small-title {
   text-align: center;
   font-family: "Cormorant Garamond", serif;
-  font-size: 13px;
+  font-size: 25px;
   color: var(--sub-text);
   margin-bottom: 4px;
 }
@@ -90,7 +86,7 @@
 #editModal h2,
 #commentModal h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 24px;
 }
 
@@ -106,7 +102,7 @@
 }
 
 .comment-box h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text);
   margin-bottom: 12px;
   text-align: left;
@@ -118,44 +114,52 @@
 }
 
 .comment-item {
-  padding: 12px 14px;
+  position: relative;
+  padding: 15px 100px 15px 14px;
   border-radius: 14px;
   background: var(--input-bg);
   border: 1px solid var(--input-line);
 }
 
+.comment-item .delete-btn {
+  height : 43px;
+  padding: 0 16px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .comment-writer {
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--box-text);
   margin-bottom: 4px;
 }
 
 .comment-text {
-  font-size: 14px;
-  color: var(--sub-text);
+  font-size: 17px;
+  color: var(--box-text);
   line-height: 1.5;
 }
 
 .comment-date {
-  font-size: 11px;
-  color: var(--sub-text);
+  font-size: 14px;
+  color: var(--box-text);
   margin-top: 6px;
 }
 
 .empty-comment {
-  padding: 14px;
-  border-radius: 14px;
-  background: var(--input-bg);
-  border: 1px solid var(--input-line);
-  color: var(--sub-text);
-  font-size: 14px;
+  color: var(--text);
+  font-size: 18px;
+  margin:0 auto;
 }
 
 #detailContent {
   text-align: left;
 }
 
-#detailModal .detail-title {
-  text-align: left;
+#deleteModal form,
+#commentDeleteModal form {
+  margin-top: 3px;
 }

@@ -4,90 +4,57 @@
   position: relative;
   overflow: hidden;
   border-radius: 270px 270px 18px 18px;
-  background: var(--window-bg);
-  box-shadow:
-    0 0 90px var(--bg-light-1),
-    0 34px 90px rgba(0, 0, 0, 0.22);
-}
-
-.window::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
   border: 20px solid var(--window-frame);
-  z-index: 5;
-  pointer-events: none;
-}
-
-.window::after {
-  content: "";
-  position: absolute;
-  inset: 33px 30px 18px 30px;
-  border-radius: 236px 236px 0 0;
-  border: 4px solid var(--window-line);
-  z-index: 6;
-  pointer-events: none;
-  opacity: 0.82;
+  background: var(--window-bg);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.22);
 }
 
 .sun-moon {
   position: absolute;
-  right: 120px;
-  top: 100px;
-  width: 96px;
-  height: 96px;
+  right: 100px;
+  top: 70px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: var(--sun-moon);
-  box-shadow:
-    0 0 18px var(--sun-moon-shadow),
-    0 0 42px var(--sun-moon-shadow);
-  z-index: 3;
+  box-shadow: 0 0 42px var(--sun-moon-shadow);
 }
 
-.moon-cover {
+.sun-moon::before{
+  content: "";
   position: absolute;
-  left: -35px;
-  top: -8px;
-  width: 96px;
-  height: 96px;
+  inset: -45px;
   border-radius: 50%;
-  background: var(--moon-cover);
-}
-
-#app.theme-day .moon-cover,
-#app.theme-sunset .moon-cover {
-  display: none;
+  background: rgba(255, 246, 199, 0.45);
+  filter: blur(35px);
+  z-index: -1;
 }
 
 .star-one {
-  top: 205px;
-  left: 155px;
+  top: 190px;
+  left: 100px;
 }
 
 .star-two {
   top: 392px;
-  left: 95px;
+  left: 400px;
 }
 
 .hill {
   position: absolute;
-  left: 50%;
+  left: -85px;
   bottom: -96px;
-  transform: translateX(-50%);
   width: 690px;
   height: 260px;
   border-radius: 50% 50% 0 0;
   background: var(--hill-bg);
-  z-index: 2;
 }
 
 .home-text {
   position: absolute;
-  top: 245px;
+  top: 230px;
   left: 0;
   right: 0;
-  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,10 +63,10 @@
 
 .home-text h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 44px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--text);
+  color: var(--chip-text);
   margin-bottom: 20px;
 }
 
@@ -107,16 +74,17 @@
   font-size: 22px;
   font-weight: 500;
   color: var(--sub-text);
-  margin-bottom: 98px;
+  margin-bottom: 45px;
 }
 
 .home-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
+/* 기록 남기기 버튼 */
 .main-btn {
   width: 180px;
   height: 66px;
@@ -126,9 +94,7 @@
   color: var(--main-button-text);
   font-size: 22px;
   font-weight: 800;
-  box-shadow:
-    0 18px 46px var(--main-button-shadow),
-    0 4px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 46px var(--main-button-shadow);
 }
 
 .view-btn {
@@ -136,10 +102,10 @@
   height: 66px;
   border-radius: 999px;
   border: 1px solid var(--input-line);
-  background: var(--chip-bg);
-  color: var(--chip-text);
+  background: var(--view-button);
+  color: #2b2250;
   font-size: 22px;
-  
+  font-weight: 800;
 }
 
 #app.theme-day .view-btn {
@@ -147,8 +113,18 @@
   color: #ffffff;
 }
 
+#app.theme-day .view-btn:hover {
+  background: #fdfeff;
+  color: rgb(41, 33, 33);
+}
+
 #app.theme-sunset .view-btn {
   background: rgba(255, 255, 255, 0.28);
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.65);
+}
+
+#app.theme-sunset .view-btn:hover {
+  background: #ffffff;
+  color: rgb(41, 33, 33);
 }
