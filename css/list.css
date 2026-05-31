@@ -1,46 +1,47 @@
 .list-box {
-  width: 1040px;
-  height : 1040px;
-  padding: 36px 38px 40px;
-  border-radius: 42px;
+  width: 860px;
+  height : 680px;
+  padding: 28px 32px 32px;
+  border-radius: 36px;
   background: var(--post-bg);
   border: 1px solid var(--card-line);
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.14);
+  overflow-y: auto;
 }
 
 .list-header {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .small-en {
   font-family: "Cormorant Garamond", "serif";
   color: var(--sub-text);
-  font-size: 24px;
-  margin-bottom: 4px;
+  font-size: 18px;
+  margin-bottom: 3px;
 }
 
 .list-header h2 {
-  font-size: 40px;
+  font-size: 34px;
   letter-spacing: -0.06em;
   color: var(--text);
 }
 
 .list-top {
   display: flex;
-  gap: 9px;
+  gap: 8px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .list-top input {
-  width: 250px;
-  height: 45px;
+  width: 180px;
+  height: 38px;
   border-radius: 999px;
   padding: 0 14px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #backHomeBtn, #writeAgainBtn{
@@ -49,20 +50,20 @@
 
 .list-top button,
 .sort-btn {
-  height: 45px;
+  height: 38px;
   border: 1px solid var(--input-line);
   border-radius: 999px;
   background: var(--chip-bg);
   color: var(--chip-text);
   padding: 0 14px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
 }
 
 .sort-buttons {
   display: flex;
   gap: 8px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .sort-btn.active {
@@ -74,45 +75,42 @@
 .post-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  max-height: 760px;
-  overflow-y: auto;
-  padding-right: 8px;
+  gap: 16px;
 }
 
 .post-card {
-  min-height: 190px;
-  padding: 25px;
-  border-radius: 26px;
+  min-height: 160px;
+  padding: 20px;
+  border-radius: 24px;
   background: var(--card-bg);
   border: 1px solid var(--card-line);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   box-shadow: 0 6px 17px var(--post-bg);
 }
 
 .post-card h3 {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .meta {
-  font-size: 18px;
+  font-size: 15px;
   color: var(--sub-text);
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .preview {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--sub-text);
   line-height: 1.55;
-  height: 44px;
+  height: 42px;
   overflow: hidden;
 }
 
@@ -132,14 +130,14 @@
 .detail-btn,
 .small-btn,
 .smalldelete-btn{
-  height: 40px;
+  height: 34px;
   padding: 0 12px;
   border : 1px solid var(--button-line);
   border-radius: 999px;
   background: var(--chip-bg);
   color: var(--chip-text);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .card-bottom {

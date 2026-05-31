@@ -200,7 +200,7 @@ button {
 }
 
 .side-text.right {
-  right: 24%;
+  right: 18%;
   bottom: 20%;
 }
 
@@ -240,11 +240,12 @@ textarea {
   background: var(--input-bg);
   color: var(--box-text);
   padding: 14px 16px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 input {
-  height: 52px;
+  height: 44px;
+  padding: 0 14px;
 }
 
 textarea {
@@ -266,28 +267,28 @@ textarea:focus {
 
 label {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 label span {
   display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
+  margin-bottom: 7px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
 }
 
 .close-btn {
   position: absolute;
-  right: 22px;
-  top: 20px;
-  width: 40px;
-  height: 40px;
+  right: 18px;
+  top: 18px;
+  width: 34px;
+  height: 34px;
   border: 0;
   border-radius: 50%;
   background: var(--close-button);
   color: var(--chip-text);
-  font-size: 24px;
+  font-size: 22px;
   font-weight:900;
 }
 

@@ -1,6 +1,6 @@
 .window {
-  width: 520px;
-  height: 650px;
+  width: 430px;
+  height: 540px;
   position: relative;
   overflow: hidden;
   border-radius: 270px 270px 18px 18px;
@@ -11,10 +11,10 @@
 
 .sun-moon {
   position: absolute;
-  right: 100px;
-  top: 70px;
-  width: 120px;
-  height: 120px;
+  right: 82px;
+  top: 60px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   background: var(--sun-moon);
   box-shadow: 0 0 42px var(--sun-moon-shadow);
@@ -23,7 +23,7 @@
 .sun-moon::before{
   content: "";
   position: absolute;
-  inset: -45px;
+  inset: -32px;
   border-radius: 50%;
   background: rgba(255, 246, 199, 0.45);
   filter: blur(35px);
@@ -31,28 +31,28 @@
 }
 
 .star-one {
-  top: 190px;
-  left: 100px;
+  top: 150px;
+  left: 90px;
 }
 
 .star-two {
-  top: 392px;
-  left: 400px;
+  top: 305px;
+  left: 70px;
 }
 
 .hill {
   position: absolute;
-  left: -85px;
-  bottom: -96px;
-  width: 690px;
-  height: 260px;
+  left: -70px;
+  bottom: -82px;
+  width: 570px;
+  height: 220px;
   border-radius: 50% 50% 0 0;
   background: var(--hill-bg);
 }
 
 .home-text {
   position: absolute;
-  top: 230px;
+  top: 205px;
   left: 0;
   right: 0;
   display: flex;
@@ -63,48 +63,48 @@
 
 .home-text h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 60px;
+  font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--chip-text);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .home-text p {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--sub-text);
-  margin-bottom: 45px;
+  margin-bottom: 38px;
 }
 
 .home-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 /* 기록 남기기 버튼 */
 .main-btn {
-  width: 180px;
-  height: 66px;
+  width: 150px;
+  height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 999px;
   background: var(--main-button);
   color: var(--main-button-text);
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 800;
   box-shadow: 0 18px 46px var(--main-button-shadow);
 }
 
 .view-btn {
-  width: 180px;
-  height: 66px;
+  width: 150px;
+  height: 50px;
   border-radius: 999px;
   border: 1px solid var(--input-line);
   background: var(--view-button);
   color: #2b2250;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 800;
 }
 
@@ -137,9 +137,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 82%;
+  top: 88%;
   text-align: center;
   color: var(--sub-text);
-  font-size: 26px;
-  font-weight: 200;
+  font-size: 17px;
+  font-weight: 500;
 }
