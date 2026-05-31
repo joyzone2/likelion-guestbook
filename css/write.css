@@ -35,9 +35,9 @@
 .write-card {
   position: relative;
   z-index: 5;
-  width: 600px;
-  height : 600px;
-  padding: 48px 34px 34px;
+  width: 650px;
+  height : 650px;
+  padding: 50px 34px 50px;
   border-radius: 44px;
   background: var(--card-bg);
   border: 2px solid var(--card-line);
@@ -49,7 +49,7 @@
 .write-card h2 {
   text-align: center;
   margin-bottom: 45px;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 800;
   color: var(--text);
   letter-spacing: -0.05em;
@@ -58,5 +58,5 @@
 .input-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 20px;
 }

@@ -119,7 +119,7 @@
 }
 
 #app.theme-sunset .view-btn {
-  background: rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, #bcb7ff, #c696ff);
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.65);
 }
@@ -127,4 +127,19 @@
 #app.theme-sunset .view-btn:hover {
   background: #ffffff;
   color: rgb(41, 33, 33);
+}
+
+#homePage {
+  position: relative;
+}
+
+.bottom-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 82%;
+  text-align: center;
+  color: var(--sub-text);
+  font-size: 26px;
+  font-weight: 200;
 }

@@ -33,19 +33,19 @@ button {
   --modal-overlay: rgba(11, 16, 36, 0.535);
 
   --text: #f9f8fa;
-  --sub-text: #cfcaee;
+  --sub-text: #dedafa;
   --box-text:#2f2a50;
   --side-text: rgba(248, 244, 255, 0.477);
   --placeholder: #7e78a2;
 
-  --card-bg: rgba(163, 167, 203, 0.345);
-  --card-line: #767c9d;
-  --post-bg: #2f3558;
+  --post-bg: rgba(103, 106, 140, 0.342);
+  --card-line: #8e95c1;
+  --card-bg: #505475;
   --input-bg: #f8f3f3;
   --input-line: #373f66;
   --button-line:#7072a8;
   --close-button:#6e759b;
-  --chip-bg: #343a5a;
+  --chip-bg: #656fa6;
   --chip-text: var(--text);
   --view-button : linear-gradient(135deg, #ffe08a, #f5b85b);
 
@@ -72,18 +72,18 @@ button {
 
 /* 오전 */
 #app.theme-day {
-  --bg: #fff9f0;
-  --bg-light-1: rgba(255, 232, 138, 0.22);
-  --bg-light-2: rgba(169, 200, 163, 0.2);
+  --bg: linear-gradient(180deg, #b8dff5 0%, #d6eef9 50%, #e8f5fb 100%);
+  --bg-light-1: rgba(255, 255, 255, 0.22);
+  --bg-light-2: rgba(255, 255, 255, 0.2);
 
-  --text: #4b5f78;
-  --sub-text: #71809b;
+  --text: #465c77;
+  --sub-text: #3e4f6d;
   --side-text: rgba(113, 128, 155, 0.72);
 
-  --window-bg: linear-gradient(180deg, #dceff7 0%, #eff6ef 58%, #f6edcf 100%);
-  --window-frame: #e7cfaf;
-  --window-line: #a8794f;
-  --hill-bg: linear-gradient(180deg, #a9c8a3 0%, #8eb68f 100%);
+  --window-bg: linear-gradient(180deg,#dcf2ff 0%,#dbefff 55%,#ffffff 100%);
+  --window-frame: #abd1c1;
+  --window-line: #62a9a3;
+  --hill-bg: linear-gradient(180deg, #c2dcbd 0%, #8eb68f 100%);
 
   --sun-moon: #ffe88a;
   --sun-moon-shadow: rgba(255, 232, 138, 0.7);
@@ -91,7 +91,7 @@ button {
   --card-bg: #fff7ea;
   --card-line: #e7d4bc;
 
-  --post-bg: #fffdf8;
+  --post-bg: #feffff;
   --input-bg: #fffdf8;
   --input-line: #e7d4bc;
   --placeholder: #a99c8c;
@@ -100,7 +100,7 @@ button {
   --chip-bg: #f1e2d0;
   --close-button : #f1e2d0;
   --view-button : #f1e2d0;
-  --chip-text: #4b5f78;
+  --chip-text: #324359;
 
   --main-button: linear-gradient(135deg, #fff1a6, #f2c98b);
   --main-button-text: #4b5f78;
@@ -113,7 +113,7 @@ button {
 
 /* 오후 */
 #app.theme-sunset {
-  --bg: #fff1e8;
+  --bg: #ffeade;
   --bg-light-1: rgba(255, 207, 170, 0.28);
   --bg-light-2: rgba(216, 184, 237, 0.28);
 
@@ -121,27 +121,27 @@ button {
   --sub-text: #8a6b83;
   --side-text: rgba(178, 129, 110, 0.72);
 
-  --window-bg: linear-gradient(180deg, #f8cdaa 0%, #d8b8ed 58%, #d78b80 100%);
-  --window-frame: #e4b27f;
+  --window-bg: linear-gradient(180deg, hsl(27, 69%, 87%) 0%, #dab9f1 58%, #d78b80 100%);
+  --window-frame: #ebc094;
   --window-line: #a66e45;
   --hill-bg: linear-gradient(180deg, #e99a86 0%, #d48780 100%);
 
   --sun-moon: #ffe28a;
   --sun-moon-shadow: rgba(255, 226, 138, 0.75);
 
-  --card-bg: #ffe4cd;
+  --card-bg: #fff4eb;
   --card-line: #e9bea1;
 
-  --post-bg: #fffaf4;
+  --post-bg: hwb(26 82% 0%);
   --input-bg: #fff7ef;
   --input-line: #e7c3a8;
   --placeholder: #a98d90;
-  --button-line:#fff7ef;
+  --button-line:#cfb6b6;
 
-  --chip-bg: #f2ddca;
-  --close-button : #f2ddca;
+  --chip-bg: #ead9ca;
+  --close-button : #f5cfab;
   --view-button:#f2ddca;
-  --chip-text: #5c3f5f;
+  --chip-text: #593c5c;
 
   --main-button: linear-gradient(135deg, #fff3c4, #f6c98f);
   --main-button-text: #5c3f5f;
@@ -149,7 +149,7 @@ button {
 
   --detail-button: linear-gradient(135deg, #d99586, #c878a6);
   --detail-button-text: #ffffff;
-  --modal-overlay: rgba(255, 243, 232, 0.5);
+  --modal-overlay: rgba(255, 243, 232, 0.616);
 }
 
 #app::before {
@@ -197,11 +197,6 @@ button {
   font-size: 20px;
   letter-spacing: 0.04em;
   color: var(--side-text);
-}
-
-.side-text.left {
-  left: 24%;
-  top: 31%;
 }
 
 .side-text.right {

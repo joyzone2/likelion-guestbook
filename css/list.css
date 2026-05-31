@@ -3,8 +3,8 @@
   height : 1040px;
   padding: 36px 38px 40px;
   border-radius: 42px;
-  background: var(--card-bg);
-  border: 2px solid var(--card-line);
+  background: var(--post-bg);
+  border: 1px solid var(--card-line);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.16);
 }
 
@@ -18,7 +18,7 @@
 .small-en {
   font-family: "Cormorant Garamond", "serif";
   color: var(--sub-text);
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 4px;
 }
 
@@ -36,8 +36,8 @@
 }
 
 .list-top input {
-  width: 180px;
-  height: 43px;
+  width: 250px;
+  height: 45px;
   border-radius: 999px;
   padding: 0 14px;
   font-size: 18px;
@@ -49,14 +49,14 @@
 
 .list-top button,
 .sort-btn {
-  height: 43px;
+  height: 45px;
   border: 1px solid var(--input-line);
   border-radius: 999px;
   background: var(--chip-bg);
   color: var(--chip-text);
   padding: 0 14px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .sort-buttons {
@@ -82,19 +82,19 @@
 
 .post-card {
   min-height: 190px;
-  padding: 20px;
+  padding: 25px;
   border-radius: 26px;
-  background: var(--post-bg);
+  background: var(--card-bg);
   border: 1px solid var(--card-line);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 14px;
-  box-shadow: 0 10px 28px var(--post-bg);
+  box-shadow: 0 6px 17px var(--post-bg);
 }
 
 .post-card h3 {
-  font-size: 22px;
+  font-size: 24px;
   color: var(--text);
   margin-bottom: 8px;
   white-space: nowrap;
@@ -103,13 +103,13 @@
 }
 
 .meta {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--sub-text);
   margin-bottom: 8px;
 }
 
 .preview {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--sub-text);
   line-height: 1.55;
   height: 44px;
@@ -132,14 +132,14 @@
 .detail-btn,
 .small-btn,
 .smalldelete-btn{
-  height: 37px;
+  height: 40px;
   padding: 0 12px;
   border : 1px solid var(--button-line);
   border-radius: 999px;
   background: var(--chip-bg);
   color: var(--chip-text);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .card-bottom {
