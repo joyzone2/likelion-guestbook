@@ -64,9 +64,16 @@ document.getElementById("goListBtn").addEventListener("click", () => {showPage("
 document.getElementById("closeWriteBtn").addEventListener("click", () => {showPage("home");});
 document.getElementById("backHomeBtn").addEventListener("click", () => {showPage("home");});
 document.getElementById("writeAgainBtn").addEventListener("click", () => {showPage("write");});
-
 document.getElementById("writeForm").addEventListener("submit", async (event) => {
   event.preventDefault();
+  const submitButton = document.querySelector("#writeForm .submit-btn");
+
+  if (submitButton.disabled === true) {
+    return;
+  }
+
+  submitButton.disabled = true;
+
   const writer = document.getElementById("writerInput").value;
   const password = document.getElementById("passwordInput").value;
   const title = document.getElementById("titleInput").value;
@@ -74,6 +81,7 @@ document.getElementById("writeForm").addEventListener("submit", async (event) =>
 
   if (writer === "" || password === "" || title === "" || content === "") {
     alert("모든 항목을 입력해주세요.");
+    submitButton.disabled = false;
     return;
   }
 
@@ -102,6 +110,8 @@ document.getElementById("writeForm").addEventListener("submit", async (event) =>
   } catch {
     alert("서버 연결 오류!!");
   }
+
+  submitButton.disabled = false;
 });
 
 searchInput.addEventListener("input", () => {renderPosts();});
