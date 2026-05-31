@@ -210,6 +210,12 @@ function openCommentDeleteModal(postId, commentId) {
 
 document.getElementById("commentForm").addEventListener("submit", async (event) => {
   event.preventDefault();
+  const submitButton = document.querySelector("#commentForm .submit-btn");
+  if (submitButton.disabled === true) {
+    return;
+  }
+
+  submitButton.disabled = true;
 
   const id = Number(document.getElementById("commentPostIdInput").value);
   const writer = document.getElementById("commentWriterInput").value;
@@ -218,6 +224,7 @@ document.getElementById("commentForm").addEventListener("submit", async (event) 
 
   if (writer === "" || password === "" || comment === "") {
     alert("모든 항목을 입력해주세요.");
+    submitButton.disabled = false;
     return;
   }
 
@@ -225,7 +232,12 @@ document.getElementById("commentForm").addEventListener("submit", async (event) 
     const response = await fetch(COMMENT_API, {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({writer: writer, comment: comment, password: password, guestbook: id})
+      body: JSON.stringify({
+        writer: writer,
+        comment: comment,
+        password: password,
+        guestbook: id
+      })
     });
 
     await response.json();
@@ -241,6 +253,8 @@ document.getElementById("commentForm").addEventListener("submit", async (event) 
   } catch {
     alert("서버 연결 오류!!");
   }
+
+  submitButton.disabled = false;
 });
 
 document.getElementById("editForm").addEventListener("submit", async (event) => {
