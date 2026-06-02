@@ -74,7 +74,7 @@
 
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -89,6 +89,8 @@
   justify-content: space-between;
   gap: 12px;
   box-shadow: 0 6px 17px var(--post-bg);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .post-card h3 {
@@ -104,6 +106,9 @@
   font-size: 15px;
   color: var(--sub-text);
   margin-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .preview {
@@ -112,6 +117,8 @@
   line-height: 1.55;
   height: 42px;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1000px) {
